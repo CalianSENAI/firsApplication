@@ -9,16 +9,120 @@ body{
     width: 100vw;
 }
 header{
-    background-color: rgb(219, 219, 219);
-    flex-grow:1;
-    
+    background-color: rgb(230, 230, 230);
+    flex-grow:0.2;
 }
 main{
-    background-color: rgb(255, 255, 255);
+    /*background-color: rgb(255, 255, 255);*/
+    background: linear-gradient(90deg,rgb(0, 179, 255),rgb(0, 119, 255));
     flex-grow:8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
     
 }
 footer{
-    background-color: rgb(219, 219, 219);
-    flex-grow:1;
+    background-color: rgb(97, 97, 97);
+    flex-grow:1.5;
+    display: grid;
+    grid-template-areas: 
+    "information"
+    "alingDetail";
+}
+
+.efeito-vidro {
+    position: absolute;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 60vh;
+    width: 40vw;
+    padding: 25px;
+}
+
+#f5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.alingDetail{
+    display: flex;
+    align-items: flex-end;
+    grid-column: alingDetail;
+    flex-grow: 1;
+    color: #ffff
+}
+
+.footerInformation{
+    display: flex;
+    background-color: rgb(75, 75, 75);
+    height: 2rem;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    color: rgb(231, 231, 231);
+}
+.information{
+    grid-column: information;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt{
+    justify-content: space-between;
+}
+
+.bt button{
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 110, 255);
+    transition: background-color 0.5s ease-out;
+}
+.bt button:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+.bt button:hover .cvgColor{
+    filter: brightness(0) saturate(100%) invert(44%) sepia(76%) saturate(7161%) hue-rotate(208deg) brightness(103%) contrast(104%);
+}
+/* ---- BOTAO 1 ---- */
+.bt button:nth-child(1){
+    margin-right: 20px;
+}
+/* ---- BOTAO 2 ---- */
+.bt button:nth-child(2){
+    margin-right: 20px;
+}
+/* ---- BOTAO 3 ---- */
+.bt button:nth-child(3){
+    margin-right: 20px;
+}
+/* ---- BOTAO 4 ---- */
+.bt button:nth-child(4){
+    margin-right: 20px;
+}
+.cvgColor{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(25%) saturate(4%) hue-rotate(111deg) brightness(100%) contrast(101%);
+    transition: filter 0.5 ease-out;
+}
+
+/* --------------------- */
+.bt form input{
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 110, 255);
+}
+form{
+    display: inline;
 }
